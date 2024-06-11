@@ -1,0 +1,83 @@
+go to =>  index.html  & output/style.css  Enter your code here
+https://tailwindcss.com/docs/installation
+
+1. Install Tailwind CSS
+Install tailwindcss and its peer dependencies via npm, and create your tailwind.config.js file.
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+-------------------------------------------
+
+2. Add Tailwind to your PostCSS configuration
+Add tailwindcss and autoprefixer to your postcss.config.js file, or wherever PostCSS is configured in your project.
+
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
+-------------------------------------------------
+
+3. Configure your template paths
+Add the paths to all of your template files in your tailwind.config.js file.
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["*"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+--------------------------------------------------
+
+4. Add the Tailwind directives to your CSS
+Add the @tailwind directives for each of Tailwind’s layers to your main CSS file.
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+-----------------------------------------------------
+
+5. Start your build process
+Run your build process with npm run dev or whatever command is configured in your package.json file.
+
+npm run dev
+---------------------------------------------
+
+6.  Start using Tailwind in your HTML
+Make sure your compiled CSS is included in the <head> (your framework might handle this for you), then start using Tailwind’s utility classes to style your content.
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="output/output.css" />
+    <link rel="stylesheet" href="output/style.css" />
+    <link rel="stylesheet" href="output/main.css" />
+</head>
+<body>
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+</body>
+</html>
+----------------------------------------------
+npm run dev
+http://localhost:5173/
+7. VS Code
+Tailwind CSS Intellisense (Brad Cornes)
+
+
+
+
+git
+--------
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/smkamrulhasan247/tailwind_installation_PostCSS_Format.git
+git push -u origin main
